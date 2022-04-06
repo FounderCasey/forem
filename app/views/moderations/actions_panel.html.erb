@@ -177,6 +177,15 @@
       </button>
 
       <div id="admin-action-options" class="admin-action-options dropdown-options hidden">
+
+      <div class="c-link c-link--block">
+        <a href="<%= URL.url %>/<%= @moderatable.username %>/moderate" target="_blank" rel="noopener">
+          <span class="py-3">
+            <%= t("views.moderations.actions.admin_profile") %>
+          </span>
+        </a>
+      </div>
+
         <% @recent_featured_count = Article.where(featured: true).where("published_at > ?", 1.day.ago).size %>
         <div class="article-admin-action mt-2">
           <button
@@ -193,6 +202,7 @@
           </div>
 
         </div>
+        <!--
         <div class="article-admin-action">
           <button
             class="c-btn c-btn--primary w-100"
@@ -206,6 +216,8 @@
             <%= t("views.moderations.actions.to_admin_profile") %>
           </div>
         </div>
+
+        -->
         <div class="article-admin-action">
           <button
             class="c-btn c-btn--primary c-btn--destructive w-100"
