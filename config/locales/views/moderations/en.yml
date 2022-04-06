@@ -97,10 +97,12 @@ en:
         toggle: Toggle section
         feature: Feature Post
         unfeature: Unfeature Post
+        admin_profile: Admin Profile
         unpublish: Unpublish Post
         vote_down: Low Quality
         flag_to_admins: Flag to Admins
         vote_up: High Quality
+        to_admin_profile: Navigate to this users admin profile.
         featured_past_day:
           one: "%{count} post from the past day is featured."
           other: "%{count} posts from the past day are featured."

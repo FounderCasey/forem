@@ -428,6 +428,18 @@ export function addBottomActionsListeners() {
     });
   }
 
+  const toAdminProfileBtn = document.getElementById('admin-profile-btn');
+  if (toAdminProfileBtn) {
+    toAdminProfileBtn.addEventListener('click', () => {
+      const {
+        articleAuthor: username,
+      } = toAdminProfileBtn.dataset;
+
+      // This just ammends the current url with the username and moderate action
+      window.parent.location.href = `/${username}/moderate`;
+    });
+  }
+
   document
     .getElementById('open-flag-user-modal')
     .addEventListener('click', toggleFlagUserModal);
